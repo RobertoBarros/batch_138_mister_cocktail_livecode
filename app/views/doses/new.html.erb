@@ -1,0 +1,12 @@
+<div class="container">
+
+  <h1>New dose of <%= @cocktail.name %></h1>
+
+  <%= simple_form_for [@cocktail, @dose] do |form| %>
+    <%= form.input :description %>
+    <%= form.association :ingredient %>
+    <%= form.submit %>
+
+  <% end %>
+
+</div>
